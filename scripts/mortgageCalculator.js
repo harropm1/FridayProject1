@@ -20,7 +20,7 @@ function calculate()
     let monthlyPayment = calculateMonthlyPayment(loanAmount, interestRate, loanLength);
     monthlyPaymentField.value = monthlyPayment.toFixed(2);
 
-    //calculate total payment
+    //calculate and display total payment
     let totalLoan = ((loanLength.value * 12) * monthlyPayment);
     totalLoanField.value = totalLoan.toFixed(2);
 }
