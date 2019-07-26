@@ -9,13 +9,20 @@ let totalLoanField;
 
 function calculateMonthlyPayment()
 {
-    let monthlyPayment = (loanAmount * (interestRate/1200)) / (1 -( Math.pow((1 + interestRate / 1200), (-12 * loanLength))));
-    return monthlyPayment;
+    let monthlyPaymentAmount = (loanAmount.value * (interestRate.value/1200)) / (1 -( Math.pow((1 + interestRate.value / 1200), (-12 * loanLength.value))));
+    return monthlyPaymentAmount;
 }
+
 
 function calculate()
 {
-    
+    //display monthly payment
+    let monthlyPayment = calculateMonthlyPayment(loanAmount, interestRate, loanLength);
+    monthlyPaymentField.value = monthlyPayment.toFixed(2);
+
+    //calculate total payment
+    let totalLoan = ((loanLength.value * 12) * monthlyPayment);
+    totalLoanField.value = totalLoan.toFixed(2);
 }
 
 function init()
@@ -29,3 +36,5 @@ function init()
     const btnCalculate = document.getElementById("calculate");
     btnCalculate.onclick = calculate;
 }
+
+window.onload = init;
