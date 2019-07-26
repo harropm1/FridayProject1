@@ -7,7 +7,7 @@ let loanLengthField;
 let monthlyPaymentField;
 let totalLoanField;
 
-function calculateMonthlyPayment()
+function calculateMonthlyPayment(loanAmount, interestRate, loanLength)
 {
     let monthlyPaymentAmount = (loanAmount.value * (interestRate.value/1200)) / (1 -( Math.pow((1 + interestRate.value / 1200), (-12 * loanLength.value))));
     return monthlyPaymentAmount;
