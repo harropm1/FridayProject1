@@ -1,0 +1,11 @@
+h1, h2, h3, nav {
+    font-family: 'Catamaran', sans-serif;
+}
+h1 {
+    margin-top: 15px;
+    margin-bottom: -25px;
+    color: #0c175c;
+}
+h2 {
+    color: #112080;
+}

@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!--My CSS, Google Fonts, and favicon-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/dollarsign.png">
+
     <title>Fictional Financial</title>
 </head>
 
 <body>
+    <!--nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <a class="navbar-brand" href="index.html">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -26,54 +33,78 @@
                 <li class="nav-item">
                     <a class="nav-link" href="mortgageCalculator.html">Mortgage Calculator</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="annuityCalculator.html">Annuity Calculator</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <h1 class="display-1 text-center">Fictional Financial</h1>
+    <header>
+        <h1 class="display-1 text-center">Fictional Financial</h1>
+    </header>
     <br />
     <main>
+        <!--description of page-->
+        <div class="container">
         <article class="text-center">
             <h2 class="display-4">Welcome to the Future Value Calculator!</h2>
             <p>Interested in creating a savings account but unsure about your interest? Our future value calculator will interest you. We can help figure out what interest you will earn and what the final value of your savings account will be. Just enter some information in the fields below and we'll do the rest!</p>
             <small class="form-text text-muted">
             Please only enter numbers and decimal points. Entering commas, dollar signs, or anything else will cause an error.
             </small>
-
         </article>
 
+        <!--form and what the action should be, but test environments don't work-->
         <!--<form name="mortgage" action="#" method="POST">-->
         <form name="mortgage" action="#" method="GET" id="inputForm">
             <div class="form-group">
                 <label for="depositAmount">Initial Deposit Amount</label>
-                <input type="text" class="form-control" id="depositAmount" placeholder="Enter Deposit Amount">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">$</div>
+                    <input type="text" class="form-control" id="depositAmount" placeholder="Enter Deposit Amount" autofocus>
+                </div>
             </div>
             <div class="form-group">
                 <label for="interestRate">Interest Rate</label>
-                <input type="text" class="form-control" id="interestRate" placeholder="Enter Interest Rate">
+                <div class="input-group-append">
+                    <input type="text" class="form-control" id="interestRate" placeholder="Enter Interest Rate">
+                    <div class="input-group-text">%</div>
+                </div>
             </div>
             <div class="form-group">
-                <label for="LoanLength">Number of Years (assuming interest is compounded monthly)</label>
-                <input type="text" class="form-control" id="loanLength" placeholder="Enter Loan Length in years">
+                <label for="loanLength">Number of Years (assuming interest is compounded monthly)</label>
+                <div class="input-group-append">
+                    <input type="text" class="form-control" id="loanLength" placeholder="Enter Loan Length in years">
+                    <div class="input-group-text">Years</div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-outline-secondary" id="calculate">Calculate</button>
-            <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            <button type="button" class="btn btn-outline-success" id="calculate">Calculate</button>
+            <button type="reset" class="btn btn-outline-danger">Reset</button>
         </form>
         <br />
         <form id="resultsForm" action="#">
             <div class="form-group">
                 <label for="futureValue">Your Future Value</label>
-                <input class="form-control" type="text" id="futureValue" readonly>
+                <div class="input-group-prepend">
+                    <div class="input-group-text">$</div>
+                        <input class="form-control" type="text" id="futureValue" readonly>
+                </div>
             </div>
             <div class="form-group">
                 <label for="interestEarned">Total Interest Earned</label>
-                <input class="form-control" type="text" id="interestEarned" readonly>
+                <div class="input-group-prepend">
+                    <div class="input-group-text">$</div>
+                        <input class="form-control" type="text" id="interestEarned" readonly>
+                </div>
             </div>
+            <button type="reset" class="btn btn-outline-danger">Reset</button>
         </form>
+        </div>
     </main>
 
     <hr>
-    <footer>
+    <footer class="text-right">
         <p>All calculations done by Michelle Harrop, and she's bad at math, so go easy on her.</p>
     </footer>
 
