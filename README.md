@@ -1,0 +1,1 @@
+This site features multiple financial calculators for a fictional financial organization. It is my first live attempt at using JavaScript to write math functions.
