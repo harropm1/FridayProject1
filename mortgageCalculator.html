@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <a class="navbar-brand" href="index.html">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -43,7 +44,6 @@
         <h1 class="display-1 text-center">Fictional Financial</h1>
     </header>
 
-    <br />
     <main>
         <!--description of page-->
         <div class="container">
@@ -62,40 +62,41 @@
                 <label for="loanAmount">Loan Amount</label>
                 <div class="input-group-prepend">
                     <div class="input-group-text">$</div>
-                        <input type="text" class="form-control" id="loanAmount" placeholder="Enter Loan Amount" autofocus>
+                        <input type="text" class="form-control" id="loanAmount" name="loanAmount" placeholder="Enter Loan Amount" autofocus>
                 </div>
             </div>
             <div class="form-group">
                 <label for="interestRate">Interest Rate</label>
                 <div class="input-group-append">
-                    <input type="text" class="form-control" id="interestRate" placeholder="Enter Interest Rate">
+                    <input type="text" class="form-control" id="interestRate" name="interestRate" placeholder="Enter Interest Rate">
                     <div class="input-group-text">%</div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="loanLength">Length of Loan</label>
                 <div class="input-group-append">
-                    <input type="text" class="form-control" id="loanLength" placeholder="Enter Loan Length in years">
+                    <input type="text" class="form-control" id="loanLength" name="loanLength" placeholder="Enter Loan Length in years">
                     <div class="input-group-text">Years</div>
                 </div>
             </div>
             <button type="button" class="btn btn-outline-success" id="calculate">Calculate</button>
             <button type="reset" class="btn btn-outline-danger">Reset</button>
         </form>
-        <br />
-        <form id="resultsForm" action="#">
+
+        <!--form for results-->
+        <form name="monthlyPaymentResults" id="resultsForm" action="#">
             <div class="form-group">
                 <label for="monthlyPayment">Monthly Payment</label>
                 <div class="input-group-prepend">
                     <div class="input-group-text">$</div>
-                        <input class="form-control" type="text" id="monthlyPayment" readonly>
+                        <input class="form-control" type="text" id="monthlyPayment" name="monthlyPayment" readonly>
                 </div>
             </div>
             <div class="form-group">
                 <label for="totalLoan">Total Cost of Loan</label>
                 <div class="input-group-prepend">
                     <div class="input-group-text">$</div>
-                        <input class="form-control" type="text" id="totalLoan" readonly>
+                        <input class="form-control" type="text" id="totalLoan" name="totalLoan" readonly>
                 </div>
             </div>
             <button type="reset" class="btn btn-outline-danger">Reset</button>
@@ -103,6 +104,7 @@
         </div>
     </main>
 
+    <!--footer-->
     <hr>
     <footer class="text-right">
         <p>All calculations done by Michelle Harrop, and she's bad at math, so go easy on her.</p>
