@@ -9,3 +9,11 @@ h1 {
 h2 {
     color: #112080;
 }
+
+header {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 15px;
+}
